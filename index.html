@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hommies - Find din perfekte roomie</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 🔹 Navigationsbar -->
+
+<header class="navbar">
+  <div class="navbar-container">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="Hommies logo" />
+    </a>
+
+    <ul class="nav-links">
+      <li>
+        <a href="pages/udforsk.html">
+          <img src="assets/images/icon-explore.svg" alt="Udforsk ikon" />
+          <strong>Udforsk</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/images/icon-matches.svg" alt="Matches ikon" />
+          <strong>Matches</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/images/icon-groups.svg" alt="Grupper ikon" />
+          <strong>Grupper</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/images/icon-inbox.svg" alt="Inbox ikon" />
+          <strong>Inbox</strong>
+        </a>
+      </li>
+    </ul>
+
+    <div id="userAction">
+      <!-- Denne del bliver dynamisk ændret i JS afhængigt af login-status -->
+      <a href="#" class="login-button">Log ind</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- 🔹 Hero Sektion -->
+<section class="hero-section">
+  <div class="hero-slide active">
+    <div class="hero-content">
+      <h1><span>Find din</span> perfekte roomie</h1>
+      <p>Vær en del af den mest pålidelige udlejningsplatform – helt gratis!</p>
+      <button>Opdag mere</button>
+      <div class="hero-arrow next-slide">
+        <img src="assets/images/rightarrow-hero.svg" alt="Næste slide pil" />
+      </div>
+
+
+    </div>
+    <img src="assets/images/slide1.png" alt="Slide 1" />
+  </div>
+
+  <div class="hero-slide">
+    <div class="hero-content">
+      <h1><span>Udlej din</span> bolig med tryghed</h1>
+      <p>Find den rette lejer hurtigt og nemt med Hommies.</p>
+      <button>Kom i gang</button>
+      <div class="hero-arrow next-slide">
+        <img src="assets/images/rightarrow-hero.svg" alt="Næste slide pil" />
+      </div>
+
+
+    </div>
+    <img src="assets/images/slide2.png" alt="Slide 2" />
+  </div>
+
+  <div class="hero-slide">
+    <div class="hero-content">
+      <h1><span>Bo i</span> din drømmeby</h1>
+      <p>Udforsk nye steder og find roomies der matcher din livsstil.</p>
+      <button>Se muligheder</button>
+      <div class="hero-arrow next-slide">
+        <img src="assets/images/rightarrow-hero.svg" alt="Næste slide pil" />
+      </div>
+
+
+    </div>
+    <img src="assets/images/slide3.png" alt="Slide 3" />
+  </div>
+</section>
+
+
+<!-- 🔹 Fællesskab Sektion -->
+<section class="trust-section">
+  <div class="container">
+    <h2 class="section-heading">Et trygt fællesskab for boligmarkedet</h2>
+    <div class="trust-grid">
+      <div class="trust-text">
+        <div class="card">
+          <img src="assets/images/rooms.png" class="card-icon" style="width: 40px; height: 40px;" />
+
+          <h3>De bedste værelser og lejligheder</h3>
+          <p>Vælg blandt opslag fra pålidelige brugere med historik på Hommies.</p>
+        </div>
+        <div class="card">
+          <img src="assets/images/pricing.png" class="card-icon" style="width: 40px; height: 40px;" />
+
+          <h3>Fair og gennemsigtige priser</h3>
+          <p>Find boligtilbud til priser, som giver mening – sat af ægte roomies.</p>
+        </div>
+        <div class="card">
+          <img src="assets/images/safe.png" class="card-icon" style="width: 40px; height: 40px;" />
+          <h3>Ingen svindel og sikre indbetalinger</h3>
+          <p>Vi beskytter dine penge og sorterer svindel fra, før du opdager det.</p>
+        </div>
+      </div>
+      <div class="trust-image">
+        <img src="assets/images/apartment.png" alt="Moderne lejlighed" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🔹 Udforsk studiebyer -->
+<section class="explore-section">
+  <div class="container">
+    <div class="explore-header">
+      <h2>Udforsk<br><span>studiebyer i Danmark</span></h2>
+      <div class="scroll-controls">
+        <button class="scroll-btn" id="scrollLeft">
+          <img src="assets/images/arrow-left.svg" alt="Venstre pil" />
+        </button>
+        <button class="scroll-btn" id="scrollRight">
+          <img src="assets/images/arrow-right.svg" alt="Højre pil" />
+        </button>
+      </div>
+    </div>
+
+    <div class="city-scroll" id="cityScroll">
+      <div class="city-card">
+        <img src="assets/images/copenhagen.png" alt="København" />
+        <h3>København</h3>
+      </div>
+      <div class="city-card">
+        <img src="assets/images/aarhus.png" alt="Århus" />
+        <h3>Århus</h3>
+      </div>
+      <div class="city-card">
+        <img src="assets/images/odense.png" alt="Odense" />
+        <h3>Odense</h3>
+      </div>
+      <div class="city-card">
+        <img src="assets/images/aalborg.png" alt="Aalborg" />
+        <h3>Aalborg</h3>
+      </div>
+      <div class="city-card">
+        <img src="assets/images/roskilde.png" alt="Roskilde" />
+        <h3>Roskilde</h3>
+      </div>
+      <div class="city-card">
+        <img src="assets/images/kolding.png" alt="Kolding" />
+        <h3>Kolding</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Link til JavaScript -->
+<script src="scripts/main.js"></script>
+
+
+<!-- 🔹 Udlej din bolig -->
+<section class="rent-section">
+  <div class="container rent-center">
+    <h2>Udlej din bolig<br><span>nemt og sikkert</span></h2>
+    <p>Få kontakt til kvalificerede lejere gennem Hommies platform – uden bøvl, uden svindel.</p>
+    <button class="primary-btn">Kom i gang</button>
+  </div>
+</section>
+<!-- 🔹 FAQ Sektion -->
+<section class="faq-section">
+  <div class="container">
+    <h2 class="faq-heading">Ofte stillede spørgsmål</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span class="question-text">Hvordan fungerer Hommies?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Du opretter en profil, ser boligopslag og matcher med roommates via platformen.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span class="question-text">Koster det noget at bruge Hommies?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Nej, det er gratis at bruge Hommies for både lejere og udlejere.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span class="question-text">Er det kun for studerende?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Nej, alle er velkomne – men Hommies er især optimeret til unge og studerende.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="scripts/main.js"></script>
+
+<section class="testimonial-section">
+  <div class="container">
+    <h2>Hvad vores glade brugere siger om Hommies</h2>
+    <div class="testimonial-grid">
+
+      <div class="testimonial-card">
+        <p class="quote">“Jeg var virkelig i tvivl om, hvordan jeg skulle finde en roomie – men Hommies fandt én med samme døgnrytme og interesser som mig.”</p>
+        <p class="description">Vi klikker så godt, at vi endda læser på samme studie nu. Det gjorde alt meget nemmere.</p>
+        <div class="user-info">
+          <img src="assets/images/emma.png" alt="Emma Sørensen" />
+          <div>
+            <strong>Frederik Sørensen</strong><br />
+            Studerende
+          </div>
+        </div>
+        <div class="quote-icon">❞</div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="quote">“Hommies hjalp mig med at finde den perfekte studerende til mit ekstra værelse i Aarhus.”</p>
+        <p class="description">Platformen er nem at bruge, og sikkerheden er i top. Jeg føler mig tryg ved at leje ud gennem Hommies.</p>
+        <div class="user-info">
+          <img src="assets/images/lars.png" alt="Lars Bentsen" />
+          <div>
+            <strong>Louise Bentsen</strong><br />
+            Udlejer
+          </div>
+        </div>
+        <div class="quote-icon">❞</div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="quote">“Bedste roomie-oplevelse nogensinde – vi er endt med at starte et band sammen!”</p>
+        <p class="description">Jeg havde aldrig troet, jeg ville møde nogen, der føles som familie. Stor ros til Hommies’ matching!</p>
+        <div class="user-info">
+          <img src="assets/images/frederik.png" alt="Frederik Nyholm" />
+          <div>
+            <strong>Emma Nyholm</strong><br />
+            Studerende
+          </div>
+        </div>
+        <div class="quote-icon">❞</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="image-block-section">
+  <div class="image-block-container">
+    <img src="assets/images/hero-showcase.png" alt="Oversigtsbillede af Hommies platform" />
+  </div>
+</section>
+<footer class="footer-section">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/images/logo.png" alt="Hommies logo" />
+    </div>
+
+    <ul class="footer-links">
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Our Stories</a></li>
+      <li><a href="#">Privacy policy</a></li>
+    </ul>
+
+    <hr />
+
+    <div class="footer-bottom">
+      <p>Copyright © 2022 Hommies All rights reserved   |   Designed in Denmark</p>
+      <div class="social-icons">
+        <a href="#"><img src="assets/images/icon-instagram.svg" alt="Instagram" /></a>
+        <a href="#"><img src="assets/images/icon-twitter.svg" alt="Twitter" /></a>
+        <a href="#"><img src="assets/images/icon-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="#"><img src="assets/images/icon-tiktok.svg" alt="TikTok" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="scripts/main.js"></script>
+</body>
+</html>
+
+
+
+
+
